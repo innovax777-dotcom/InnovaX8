@@ -1,0 +1,223 @@
+
+
+
+    :root{
+      --bg1:#0f1724;
+      --bg2:#081226;
+      --accent1:#6ee7b7;
+      --accent2:#8b5cf6;
+      --muted1:rgba(255,255,255,0.06);
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --text:#e6eef8;
+      --shadow: 0 10px 30px rgba(8,12,20,0.6);
+      --glow: 0 0 40px rgba(139,92,246,0.25);
+      --radius:16px;
+      --font-sans: "Segoe UI", "Roboto", "Noto Sans", sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font-sans);
+      color:var(--text);
+      background:
+        radial-gradient(800px 400px at 10% 20%, rgba(70, 16, 197, 0.14), transparent 10%),
+        radial-gradient(700px 300px at 90% 80%, rgba(46,197,255,0.08), transparent 10%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:5px;
+      direction:rtl;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .card{
+      width:100%;
+      max-width:990px;
+      background: linear-gradient(180deg, rgba(224, 30, 30, 0.007), rgba(255,255,255,0.01));
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow), var(--glow);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      padding:28px;
+      backdrop-filter: blur(8px) saturate(120%);
+      border: 1px solid rgba(255,255,255,0.04);
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* futuristic accents */
+    .spark{
+      position:absolute;
+      width:420px;height: 420px;;
+      right:-120px;top:-60px;
+      background: conic-gradient(from 120deg, rgba(139,92,246,0.06), rgba(110,231,183,0.04));
+      filter: blur(40px);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:6px;
+    }
+    .logo{
+      width:72px;height:72px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent2),var(--accent1));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:20px;color:#041225;
+      box-shadow: 0 6px 24px rgba(139,92,246,0.18);
+    }
+    h1{margin:0;font-size: 25px;letter-spacing:0.2px}
+    p.lead{margin:6px 0 18px;color:rgba(230,238,248,0.88)}
+
+    /* left column */
+    .left{
+      padding:18px 6px 6px 18px;
+    }
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:18px;
+      border:1px solid var(--glass);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6) inset;
+    }
+    .intro{
+      font-size:18px;
+      line-height:1.6;
+      color:var(--text);
+    }
+    .features{
+      display:flex;
+      gap:12px;
+      margin-top:16px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:10px 14px;border-radius:999px;border:1px solid var(--glass-2);
+      font-size:13px;color:rgba(230,238,248,0.92);
+      display:inline-flex;align-items:center;gap:8px;
+      box-shadow: 0 4px 18px rgba(2,6,23,0.45);
+    }
+
+    /* right column / contact */
+    .right{
+      padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.008));
+      border:1px solid var(--glass);
+      display:flex;flex-direction:column;gap:14px;align-items:stretch;justify-content:center;
+      min-height:320px;
+    }
+    .contact-title{font-size:16px;margin-bottom:6px;color:var(--accent1)}
+    .contact-card{
+      background:linear-gradient(180deg, rgba(14,22,34,0.45), rgba(6,10,18,0.25));
+      border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03);
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .info-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .label{font-size:13px;color:rgba(230,238,248,0.7)}
+    .value{font-weight:700;color:var(--text);font-size:14px}
+
+    .cta{
+      display:flex;gap:12px;margin-top:6px;
+    }
+    .btn{
+      flex:1;
+      padding:12px 14px;border-radius:12px;border:0;font-weight:700;
+      cursor:pointer;color:#041225;background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      box-shadow: 0 8px 30px rgba(139,92,246,0.18);
+      transition:transform .18s ease, box-shadow .18s ease;
+      text-decoration:none;text-align:center;
+    }
+    .btn.secondary{
+      background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);
+      box-shadow:none;
+    }
+    .btn:active{transform:translateY(2px)}
+
+    /* subtle code-like teaser */
+    .snip{
+      margin-top:16px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(11,17,30,0.6), rgba(6,10,18,0.5));
+      font-family:ui-monospace, SFMono-Regular, Menlo, monospace;font-size:13px;color:#9bd;line-height:1.6;
+      border:1px solid rgba(110,231,183,0.06);
+    }
+
+    footer{
+      grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:6px;
+      border-top:1px dashed rgba(255,255,255,0.03);
+      font-size:13px;color:rgba(230,238,248,0.65)
+    }
+
+    /* responsive */
+    @media (max-width:900px){
+      .card{grid-template-columns:1fr; padding:18px}
+      .right{order:2}
+      .left{order:1}
+    }
+
+    /* entrance animations */
+    .card, .logo, .hero, .contact-card{animation:fadeUp .8s cubic-bezier(.2,.9,.35,1) both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+
+
+
+
+
+/* حل مشكلة نزول رقم الهاتف تحت بعض */
+@media (max-width:600px){
+  .info-row{
+    flex-wrap:nowrap;         /* منع النزول تحت بعض */
+    flex-direction:column;    /* أو اجعلها عمود واحد منظم */
+    align-items:flex-start;   /* محاذاة لليسار/اليمين حسب الاتجاه */
+    gap:4px;
+  }
+  .info-row .value{
+    font-size:13px;           /* تصغير الخط ليتناسب مع الشاشة */
+    word-break:break-word;    /* كسر النص الطويل إذا لزم */
+  }
+}
+
+
+
+    @media (max-width:900px){
+      .card{grid-template-columns:1fr; padding:18px}
+      .right{order:2}
+      .left{order:1}
+    }
+
+    @media (max-width:600px){
+      body{padding:10px;}
+      .card{padding:16px;gap:16px;}
+      .intro{font-size:16px;}
+      .logo{width:56px;height:56px;font-size:16px;}
+      h3{font-size:18px;}
+      .features{gap:8px;}
+      .chip{font-size:12px;padding:8px 12px;}
+      .btn{padding:10px;font-size:13px;}
+      footer{flex-direction:column;text-align:center;}
+    }
+
+    .card, .logo, .hero, .contact-card{animation:fadeUp .8s cubic-bezier(.2,.9,.35,1) both}
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
