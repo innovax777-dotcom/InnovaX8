@@ -1,6 +1,6 @@
     // تحديث بيانات الاتصال بسهولة من هنا فقط
     const contact = {
-      email: "innovax@gmail.com",
+      email: "innovax777@gmail.com",
       phoneDisplay: "+963 997 703 663",
       phoneTel: "+963997703663"
     };
